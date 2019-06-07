@@ -1,0 +1,2 @@
+Print() syntax:
+  print(<var>/<msg>, ....., [end = char], [sep = char])
