@@ -1,25 +1,30 @@
-print()
---print(a, b, c, sep = '_') //By default sep is == ' ', it can be replaced by any character
---print('Gwalior', end = '') //By default end is == '\n', if we need to avoid new line after print statement, use as shown
---print('%d, %d, %d'%(a, b, c)) //Using conversion specifiers
---print("{}, {}, {}".format(a, b, c)) //printing using .format() method, [{} known as specifiers]
---print("{0}, {1}, {2}, {0}, {0}".format(a, b, c)) //can print variable multiple times using index locations
---print("{0:d}, {1:f}, {2}, {0}".format(a, b, c)) //Used for conversions while printing [Cannot convert strings]
---print('{0:10d}\n{1:10d}\n{2:10d}\n{3:10d}'.format(a, b, c, t)) //Right align values by nth spaces in {0:'n'd}
---print('{0:<10d}\n{1:>10d}\n{2:^10d}\n{3:10d}'.format(a, b, c, t)) //[<: left alignment], [>: right alignment], [^: centre alignment]
+print():
+  print() syntax:
+    print(<var>/<msg>, ....., [end = char], [sep = char])
+  print(a, b, c, sep = '_') //By default sep is == ' ', it can be replaced by any character
+  print('Gwalior', end = '') //By default end is == '\n', if we need to avoid new line after print statement, use as shown
+  print('%d, %d, %d'%(a, b, c)) //Using conversion specifiers
+  print("{}, {}, {}".format(a, b, c)) //printing using .format() method, [{} known as specifiers]
+  print("{0}, {1}, {2}, {0}, {0}".format(a, b, c)) //can print variable multiple times using index locations
+  print("{0:d}, {1:f}, {2}, {0}".format(a, b, c)) //Used for conversions while printing [Cannot convert strings]
+  print('{0:10d}\n{1:10d}\n{2:10d}\n{3:10d}'.format(a, b, c, t)) //Right align values by nth spaces in {0:'n'd}
+  print('{0:<10d}\n{1:>10d}\n{2:^10d}\n{3:10d}'.format(a, b, c, t)) //[<: left alignment], [>: right alignment], [^: centre alignment]
 
-input()
---a = input('Enter number: ') //Takes input from the keyboard [always takes input in the form of string]
---a = int(input('Enter number: ')) //int() transforms str to integer
---a = float(input('Enter number: ')) //int() transforms str to float
+input():
+  input() syntax:
+    input('Enter number: ')
+  a = input('Enter number: ') //Takes input from the keyboard [always takes input in the form of string]
+  a = int(input('Enter number: ')) //int() transforms str to integer
+  a = float(input('Enter number: ')) //int() transforms str to float
 
 if statement:
---if (exp) :      //Single if statement
+  if (exp) :      //Single if statement
     ===
     ===
   else:
     ===
---if(exp) :       //Multiple if statement
+
+  if(exp) :       //Multiple if statement
     ===
   elif(exp) :
     ===
@@ -34,3 +39,9 @@ range():
 --range(N1, [N2], [D]):
 --eg:k = range(1, 11) //it will return range(1, 11), not a list
      k = list(range(1, 11)) //it will return a list fron 1 to 10
+
+for loop:
+  for <var> in <container>:
+    ====
+    [break]
+    [continue]
