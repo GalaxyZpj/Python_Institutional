@@ -1,2 +1,15 @@
-Print() syntax:
+print() syntax:
   print(<var>/<msg>, ....., [end = char], [sep = char])
+
+input() syntax:
+  input('Enter number: ')
+
+while:
+  while exp:
+    break/continue
+
+for:
+  for <var> in <container>:
+    ====
+    [break]
+    [continue]
