@@ -1,0 +1,59 @@
+ASSIGNMENT ONE
+1) The cover price of a book is $24.95, but bookstores
+get a 40 percent discount. Shipping costs $3 for the first
+copy and 75 cents for each additional copy. Calculate the
+total wholesale costs for 60 copies.
+
+2) You look at the clock and see that it is currently
+14.00h. You set an alarm to go off 535 hours later.
+At what time will the alarm go off? Write a program that
+prints the answer. Hint: for the best solution, you will
+need the modulo operator
+
+3) Write code that can compute the surface of circle,
+using the variables radius and pi = 3.14159. The formula,
+in case you do not know, is radius times radius times pi.
+Print the outcome of your program as follows: “The surface
+area of a circle with radius ...is ...”
+
+4) Write code that classifies a given amount of money
+(which you store in a variable named amount), specified in
+cents, as greater monetary units. Your code lists the
+monetary equivalent in dollars (100 ct), quarters (25 ct),
+dimes (10 ct), nickels (5 ct), and pennies (1 ct).
+Your program should report the maximum number of dollars
+that fit in the amount, then the maximum number of
+quarters that fit in the remainder after you subtract
+the dollars, then the maximum number of dimes that fit
+in the remainder after you subtract the dollars and
+quarters, and so on for nickels and pennies. The result
+is that you express the amount as the minimum number of
+coins needed.
+
+5) Ask the user to enter three numbers. Then print the
+largest, the smallest, and their average, rounded to 2
+decimals
+
+6) Grades are values between zero and 10 (both zero and
+  10 included), and are always rounded to the nearest half
+  point. To translate grades to the American style, 8.5 to
+  10 become an “A,” 7.5 and 8 become a “B,” 6.5 and 7
+	become a “C,” 5.5 and 6 become a “D,” and other
+	grades become an “F.” Implement this translation,
+	whereby you ask the user for a grade, and then give
+	the American translation. If the user enters a grade
+	lower than zero or higher than 10, just give an error
+	message. You do not need to handle the user entering
+	grades that do not end in .0 or .5, though you may do
+	that if you like – in that case, if the user enters
+	such an illegal grade, give an appropriate error message.
+
+7) Ask the user to supply a string. Print how many
+different vowels there are in the string. The capital
+version of a lower case vowel is considered to be the
+same vowel. y is not considered a vowel. Try to print
+nice output (e.g., printing “There are 1 different
+vowels in the string” is ugly). Example: When the user
+enters the string “It’s Owl Stretching Time,” the program
+should say that there are 3 different vowels in the
+string.
