@@ -45,3 +45,45 @@ for loop:
     ====
     [break]
     [continue]
+
+String:
+  Strings are immutable (Not reassignable).
+  It is a predefined class which also includes its own methods(properties).
+
+Slicing:
+  Syntax:
+    [si: ei: d]   //si: Start index, ei: end index, d: step
+  Operations:
+    +: concatinate 2 Strings    //Not efficient, uses more memory
+    *: repeats the Strings
+    >,<,<=,>=,==: will compare ascii values //same as c
+  Functions:
+    ord('chr'): returns ascii value of chr
+    chr(num): returns
+    x.capitalize(): will convert first character into upper case(title case).
+    x.casefold(): will convert the string in lower case.
+    x.startswith('str', startIndex, endIndex): This method will return True if string starts with specied substrings.    //Case Sensitive Function
+    x.endswith(str, [si], [ei])
+    x.center(width, char): creates specified width for the string and fill the space with specified char.
+    x.ljust(width, char): same with left alignment
+    x.rjust(width, char): same with right alignment
+    x.find(str, [si], [ei]): returns the start index of specified substring. Returns -1 if substring doesn't exist.
+    x.index(str, [si], [ei]): same as find() but produces exception when substring not found.
+    x.rfind(str, [ei], [si]): search in reverse direction.
+    x.upper(): converts whole string in to upper case.
+    x.lower(): converts whole string in to lower case.
+    x.swapcase(): reverse the case of the character.
+    //All booleans from here
+    x.isalpha(): returns True if str contains alphabets only.
+    x.isupper(): check if all upper.
+    x.islower(): check if all lower.
+    x.isalnum(): returns True if characters are num or alphabets.
+    x.istitle(): check for upper first character.
+    x.isdigit(): check for digit.
+    x.isnumeric(): same as above.
+    x.isspace(): check for space.
+    x.isdecimal(): check for float.
+    x.strip([char]): removes leading and trailing spaces from a string.
+    x.lstrip([char]): removes leading spaces.
+    x.rstrip([char]): removes trailing spaces.
+    x.replace(x, y, [n]): replaces x with y in a string.    //n denotes repetition

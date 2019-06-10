@@ -63,3 +63,47 @@ while(i <= 5):
 #for
 for i in range(1, 11):
     print(i)
+
+#Strings
+x = 'Gwalior'
+x[0]
+x[2:5]
+x[0:]
+x[2:]
+x[:4]
+x[0::2]
+x[5:2:-1]       #will start from
+x[::-1]     #reverse
+x + ' ' : 'city'
+x * 3
+x > 'agra'
+x.capitalize()
+x = 'Agra'
+x.casefold()
+
+x = 'Jaipur'
+x.startwith('Jai')
+x.startwith('ai', 1)
+x.endswith('pur')
+
+x.center(15, '*')
+x.ljust(10, '*')
+x = '252'
+x.ljust(10, '0')
+
+s = 'the man the machine'
+s.find('a')
+i = s.find('a')
+s = s.find('a', i+1)
+i = s.find('the')
+i = s.find('the', i+1)
+i = s.find('ach')
+i = s.index('ac')
+i = s.index('act')      #will give error
+
+x = 'GGGGwalior'
+print(x.lstrip('G'))
+
+x = 'the man the machine'
+x.replace('the', 'that')
+print(x.replace('the', 'that', 1))
