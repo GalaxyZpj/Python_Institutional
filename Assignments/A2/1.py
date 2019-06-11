@@ -1,0 +1,7 @@
+s = input('Enter a string: ')
+count_a = s.count('a') + s.count('A')
+count_e = s.count('e') + s.count('E')
+count_i = s.count('i') + s.count('I')
+count_o = s.count('o') + s.count('O')
+count_u = s.count('u') + s.count('U')
+print(f'Occurence >>>\ta: {count_a}\te: {count_e}\ti: {count_i}\to: {count_o}\tu: {count_u}')

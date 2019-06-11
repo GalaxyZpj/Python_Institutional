@@ -61,6 +61,7 @@ Slicing:
     ord('chr'): returns ascii value of chr
     chr(num): returns
     x.capitalize(): will convert first character into upper case(title case).
+    x.title(): will capitalize first letter of each word.
     x.casefold(): will convert the string in lower case.
     x.startswith('str', startIndex, endIndex): This method will return True if string starts with specied substrings.    //Case Sensitive Function
     x.endswith(str, [si], [ei])
@@ -87,3 +88,40 @@ Slicing:
     x.lstrip([char]): removes leading spaces.
     x.rstrip([char]): removes trailing spaces.
     x.replace(x, y, [n]): replaces x with y in a string.    //n denotes repetition
+    x.count('str'): returns how many times str occured in the string x.
+    x.split(<char>/<substr>,[n]) : n represents no. of splits.
+    x.rsplit(<char>/<substr>,[n]): same as split but will split from right.
+    x.partition(<char>/<substr>): same as split but will include the char on which it is being splited.
+    x.zfill(n): fill zeros on the left side of the string according to the width of the whole result.
+
+Tuple:
+  It is a container which contains heterogeneous kind of data (data of any datatype)
+  Tuples are immutable. It doesnot support reassignment of its elements.
+  Declaration:
+    t = ()    or    t = tuple()
+  tuple() is a constructor.
+  Arithematic Operations: +, *
+    +: concatinate 2 tuples.
+    *: returns same tuple multiple times.
+  Logical Operators: >, <, >=, <=, ==
+    <,>,<=,>=: compares 2 tuples element by element(not by tuple length).
+  Assignment Operator: =, +=
+  ==
+  Searching in a tuple:
+    eg.
+      20 in tuple_name    //returns True if 20 is present in tuple_name
+  To declare new tuple:
+    eg.
+      t = (90,)
+  Tuple Methods:
+    t.__len__(): returns length of tuple.
+    t.count(element): returns occurence of element in the tuple t.
+    t.index(element, [si], [ei]): returns the index of the element in the tuple t. Produces error if element doesnot exist.
+
+  Functions (common to list and tuple):
+    max(x): returns maximum value in the container x.
+    min(x): returns minimum value in the container x.
+    sum(x): returns sum of the elements in the container x. //should not contain strings in between
+    sorted(x, [reverse = False]): sort elements of a container(by default in ascending, for decending change reverse = True).
+    any(x): returns True if any one element returns True, else False.
+    all(x): returns False if any one element returns False, else True.

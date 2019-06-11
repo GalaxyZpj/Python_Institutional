@@ -1,4 +1,4 @@
-a = 10
+"""a = 10
 b = 30
 c = a + b
 print('%d, %d, %d'%(a, b, c))
@@ -107,3 +107,40 @@ print(x.lstrip('G'))
 x = 'the man the machine'
 x.replace('the', 'that')
 print(x.replace('the', 'that', 1))
+"""
+x = 'Gwalior, Bhopal, Indore'
+j = x.split(",")
+j = x.split(",", 1)
+x.rsplit(",", 1)
+x = "this is test program"
+k = x.partition("is")
+#print(k)
+x = 'Gwalior,Indore,Bhopal,Indore'
+k = x.partition(",")
+#print(k)
+x = "this is test program"
+j = x.title()
+x = "4567"
+x.zfill(10)
+
+#Tuple
+t = ()      //tuple declaration
+t = tuple()     //declaration using a constructor
+t = (65, 78, 90, 22, 33)
+t = (78, 90.6, 'Bhopal', 'Indore', (90, 87, 88))
+print(t[0])
+print(t[3][1])
+t1 = (10, 20, 30)
+t2 = (1, 2, 3)
+t3 = t1 + t2
+print(t3)
+print(t3*3)
+print(t1>t2)        #True
+t1 = (10, 20, 30, 40)
+t2 = (1000, 1)
+print(t1 > t2)      #False
+t = tuple()
+t += (78,)
+t += (77,)
+t += (79,)
+print(t)        #, will be absent in the end of tuple
