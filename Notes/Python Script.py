@@ -17,18 +17,18 @@ c = 100
 t = a + b + c
 print('{0:10d}\n{1:10d}\n{2:10d}\n{3:10d}'.format(a, b, c, t))
 #Allignment
-print('{0:<10d}\n{1:>10d}\n{2:^10d}\n{3:10d}'.format(a, b, c, t))
+print('{0:<10d}\n{1:>10d}\n{2:^10d}\n{3:10d}'.format(a, b, c, t))"""
 
 #input
-a = input('Enter number: ')
+"""a = input('Enter number: ')
 b = input('ENter number: ')
 c = a + b
 #c = a - b //not possible
 #c = a * b //not possible
 a = int(input('Enter number: ')) #same for float
 b = int(input('Enter number: '))
-c = a + b
-#if
+c = a + b"""
+"""#if
 amt = float(input('Enter Amount: '))
 qty = float(input('Enter Quantity'))
 tamt = amt * qty
@@ -42,6 +42,7 @@ else:
 print('Discount Amount: ', dis)
 netamt = tamt - dis
 print('Net Amount: ', netamt)
+
 #while
 n = int(input('Enter number'))
 i = 1
@@ -62,10 +63,10 @@ while(i <= 5):
 
 #for
 for i in range(1, 11):
-    print(i)
+    print(i)"""
 
 #Strings
-x = 'Gwalior'
+"""x = 'Gwalior'
 x[0]
 x[2:5]
 x[0:]
@@ -107,7 +108,7 @@ print(x.lstrip('G'))
 x = 'the man the machine'
 x.replace('the', 'that')
 print(x.replace('the', 'that', 1))
-"""
+
 x = 'Gwalior, Bhopal, Indore'
 j = x.split(",")
 j = x.split(",", 1)
@@ -121,10 +122,10 @@ k = x.partition(",")
 x = "this is test program"
 j = x.title()
 x = "4567"
-x.zfill(10)
+x.zfill(10)"""
 
 #Tuple
-t = ()      //tuple declaration
+"""t = ()      //tuple declaration
 t = tuple()     //declaration using a constructor
 t = (65, 78, 90, 22, 33)
 t = (78, 90.6, 'Bhopal', 'Indore', (90, 87, 88))
@@ -144,3 +145,24 @@ t += (78,)
 t += (77,)
 t += (79,)
 print(t)        #, will be absent in the end of tuple
+"""
+#Lists
+"""L = [30, 80, 67, 54]
+print(L)
+L = ['Ajay', 'Gwalior', 9.6, 67]
+L[0] = 'Noida'
+print(L)
+L[2:]
+L[::-1]
+del L[0]
+del L[1:]
+#del L[49:30:-1]     #will delete elements in reverse
+L = [[1,2,3],[5,6,7,8],[6,8,9]]
+L = [1, 2, 3]
+print(L[1][2])
+L.append(90)
+L.insert(3, "Gwalior")
+L.insert(3, (1,3,4,5))
+L.remove(1)
+L.index(3)
+L.sort()"""

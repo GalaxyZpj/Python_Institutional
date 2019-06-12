@@ -16,6 +16,13 @@ input():
   a = input('Enter number: ') //Takes input from the keyboard [always takes input in the form of string]
   a = int(input('Enter number: ')) //int() transforms str to integer
   a = float(input('Enter number: ')) //int() transforms str to float
+Taking Multiple Inputs in a single line:
+  eg.
+    k = input('Enter 3 no: ').split(' ')    //k will have a tuple
+    a ,b, c = input('Enter 3 no: ').split(' ')  //can only accept 3 values or will show error
+
+type(x): returns the type of x.
+isinstance(x, data_type): returns boolean of element x compared with datatype.
 
 if statement:
   if (exp) :      //Single if statement
@@ -116,12 +123,41 @@ Tuple:
   Tuple Methods:
     t.__len__(): returns length of tuple.
     t.count(element): returns occurence of element in the tuple t.
-    t.index(element, [si], [ei]): returns the index of the element in the tuple t. Produces error if element doesnot exist.
+    t.index(element, [si], [ei]): returns the index of the element in the tuple t. Produces error if element does not exist.
 
   Functions (common to list and tuple):
     max(x): returns maximum value in the container x.
     min(x): returns minimum value in the container x.
     sum(x): returns sum of the elements in the container x. //should not contain strings in between
-    sorted(x, [reverse = False]): sort elements of a container(by default in ascending, for decending change reverse = True).
+    sorted(x, [reverse = False]): sort elements of a container(by default in ascending, for descending change reverse = True).
     any(x): returns True if any one element returns True, else False.
     all(x): returns False if any one element returns False, else True.
+
+List:
+  Lists are mutable. Can change data at same location.
+  It is a container which also contains heterogeneous data.
+  Declaration:
+    L = []    or    L = list()
+  Arithematic Operations: +, *
+  Relational Operators: <, >, <=, >=, ==, in, not in
+  Assignment Operator: +=
+  Functions:
+    del L[0]: will delete first element of the list L. //del L[1:] also works, will remove all the elements leaving the first element
+    min(l):
+    max(l):
+    sum(l):
+    any():
+    all():
+    sorted():
+  Remove elements from tuple: convert tuple to a list, remove the element from the list and convert the list to tuple.
+  List Methods:
+    l.append(x): appends x to the end of the list.    //modifies the list at the same location in the memory
+    #L+=[44]: should be avoided as it uses more memory.
+    l.insert(index, x): appends x to a specified index. Shifts the data forward.
+    l.remove(x): removes x from the list, does not require an index position. Will show error if x not in the list.
+    l.pop([index]): removes the last element from the list by default or removes the element at the specified index. Gives error if index not found.
+    l.clear(): removes all the elements of the list.
+    l.index(x,[si],[ei]): returns the index of specified element. Gives error if element not found.
+    l.count(x): returns the occurance of element x in the List.
+    l.sort([reverse = True]): sort the list in ascending order by default.   //sorts the list at the same location, while sorted(L) returns the sorted list and is stored at a new location
+    l.reverse():  reverse the list at the same location.
