@@ -166,3 +166,15 @@ L.insert(3, (1,3,4,5))
 L.remove(1)
 L.index(3)
 L.sort()"""
+
+#Dictionary
+d = {}
+d = dict()
+d = {'0751': 'Gwalior', '0123': 'Noida', '0731': 'Indore'}
+print(d['0123'])
+d['0123'] = 'Bhopal'
+print(d['0123'])
+print(d.get('075', 'Not found.'))
+d = {1: 'one', 2: 'Two'}
+for key in d.keys():
+    print(key, d[key])

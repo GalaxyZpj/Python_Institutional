@@ -1,3 +1,8 @@
+SideNotes:
+  #DeepCopy: when 2 objects point at the same location, the location is known as deep copy.
+  #ShallowCopy: same copy but different memory locations.
+
+
 print():
   print() syntax:
     print(<var>/<msg>, ....., [end = char], [sep = char])
@@ -161,3 +166,24 @@ List:
     l.count(x): returns the occurance of element x in the List.
     l.sort([reverse = True]): sort the list in ascending order by default.   //sorts the list at the same location, while sorted(L) returns the sorted list and is stored at a new location
     l.reverse():  reverse the list at the same location.
+
+Dictionary:
+  Declaration:
+    D = {}    or    D = dict()
+  eg.
+    d = {key1: value1, key2: value2, key3: value3}
+  Dictionaries are mutable.
+  Used to search data using the key.
+  Can store any datatype.
+  Data reassignment:
+    D['key1'] = 'Random'
+  Append new data:
+    D['NewKey'] = 'Value'
+  No Arithematic Operations work.
+  Dictionary Methods:
+    D.copy(): used to create shallow copy of Dictionaries.
+      eg.
+        k = D.copy()    //k contains a copy of D but at different location
+    D.get(key, 'MSG'): this method return the value of specified key. If key doesnot exist, it will print specified message.
+    D.keys(): returns all the keys in the form of list.
+    

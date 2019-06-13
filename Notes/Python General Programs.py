@@ -78,3 +78,11 @@ for i in range(len(M)):
     for j in range(len(L[i])):
         print(L[i][j], end = " ")
     print()"""
+
+#Find Name accross marks >= 60
+"""P = [60, 70, 85, 29, 44, 66]
+N = ['Ajay', 'Harry', 'Vikas', 'Ankit', 'Vijay', 'Mohan']
+print('Studens with score above 60:-')
+for x,y in zip(P,N):
+    if x >= 60:
+        print(y)"""
