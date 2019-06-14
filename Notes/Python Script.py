@@ -178,3 +178,23 @@ print(d.get('075', 'Not found.'))
 d = {1: 'one', 2: 'Two'}
 for key in d.keys():
     print(key, d[key])
+d = {'0751': 'Gwalior', '0123': 'Noida', '0731': 'Indore'}
+v = d.values()
+print(v)
+for i in v:
+    print(i)
+v = d.items()
+for i in v:
+    print(i)
+
+d = dict()
+for i in range(3):
+    id = input('Enter id: ')
+    name = input('Enter Name: ')
+    d.setdefault(id, name)
+print(d)
+
+d = {'100': 'Madhya Pradesh', '200': 'Bihar', '300': 'Haryana'}
+i = {'400': 'Uttar Pradesh', '500': 'Uttrakhand'}
+d.update(i)
+print(d)

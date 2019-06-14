@@ -180,10 +180,18 @@ Dictionary:
   Append new data:
     D['NewKey'] = 'Value'
   No Arithematic Operations work.
+  Dictionary Functions:
+    dict.fromkeys(sequence, values): it is a static method. Used to create Dictionary in which keys are the elements
+      of the sequence and all keys have a common value specified.
   Dictionary Methods:
     D.copy(): used to create shallow copy of Dictionaries.
       eg.
         k = D.copy()    //k contains a copy of D but at different location
     D.get(key, 'MSG'): this method return the value of specified key. If key doesnot exist, it will print specified message.
     D.keys(): returns all the keys in the form of list.
+    D.values(): returns all the values in the form of list.
+    D.items(): return all the keys and values in a list in the form of tuple.
+    D.setdefault(key, value): this Function searches the specified key. If key exists, it will return its value, otherwise insert it.
+    D.update(dict): used to merge elements of dictionary dict in D if the keys are unique. If the key already exists in D,
+      it will overwrite the value of that key with the value specified in dict.
     

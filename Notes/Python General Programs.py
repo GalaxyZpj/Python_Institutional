@@ -86,3 +86,11 @@ print('Studens with score above 60:-')
 for x,y in zip(P,N):
     if x >= 60:
         print(y)"""
+
+#Creating a Dictionary from 2 lists
+"""l1 = ['Pranav', 'Shreyansh', 'Harsh']
+l2 = [12345, 67890, 22222]
+d = {}
+for x, y in zip(l1, l2):
+    d[y] = x
+print(d)"""
