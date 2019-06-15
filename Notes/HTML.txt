@@ -1,0 +1,46 @@
+HTML: Hypertext Markup Language
+HT represents Rich text(Bold, Italic, Hyperlink, etc)
+
+<head>: this optional tag is used to prepare heading for a web page. Under this tag, one can use following tags:
+  <h1>, <h2>, ....<h6>:
+  <title>:
+<hr> (Horizontal Ruler)(contains no end tag): used to display a Horizontal line.
+  Attributes:
+    color = any color
+    width = n or n%
+    align = left, right or center
+<body>:
+  Attributes:   //Values of Attributes always in quotes
+    text = any color
+    bgcolor = any color
+    background = any image    //Display the image in the form of tile if the image is of smaller resolutions
+  <br> (break)(contains no end tag): move to next line
+  <p> (Paragraph):
+  <div>(division):
+<center>: to move elements in the center.
+<font>:
+  Attributes:
+    face = font_name
+    size = + or - n  (increment or decrement the size by n) //By default, size is 10
+    color = any color
+  <b>(bold):
+  <i>(italic):
+  <u>(underline):
+  <s>(strikethru):
+  <sup>(superscript):
+  <sub>(subscript):
+  <img>(image)(no closing tag):
+    Attributes:
+      src = image file
+      height = n or n%
+      width = n or n%
+      title = any text
+      dynsrc = video file   //does not work in chrome by default
+  <embed>: used to insert audios, videos and pdfs
+    Attributes:
+      src = url or file
+      width = n or n%
+      height = n or n%
+      playcount = n
+      autostart = true/False    //By default true
+      
