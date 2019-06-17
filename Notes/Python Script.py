@@ -168,7 +168,7 @@ L.index(3)
 L.sort()"""
 
 #Dictionary
-d = {}
+"""d = {}
 d = dict()
 d = {'0751': 'Gwalior', '0123': 'Noida', '0731': 'Indore'}
 print(d['0123'])
@@ -198,3 +198,44 @@ d = {'100': 'Madhya Pradesh', '200': 'Bihar', '300': 'Haryana'}
 i = {'400': 'Uttar Pradesh', '500': 'Uttrakhand'}
 d.update(i)
 print(d)
+
+d = {'100': 'Ajay', '200': 'Vikas', '300': 'Peter'}
+d.pop('200')
+
+#String Method
+k = '@@@@@'
+m = 'Ravi Kumar'
+k.join(m)
+
+
+x = 'Gwalior'
+y = list(x)
+j = ''
+j.join(y)"""
+
+"""#Set
+x = {5,6,7,8,3,4,5,6,7,8,1}
+x.add(100)
+y = [9,8,6,6,4,4,4]
+x.update(y)
+y = {100, 200, 300}
+x.union(y)
+y = {100, 200, 4,5,1,300}
+x.intersection(y)
+x.difference(y)
+x.issuperset(y)
+L = [3,5,6,7,7]
+s = set(L)
+L = [[10,20], [40,60], [50,80]]
+D = dict(L)
+#L = [[10,20,30], [40,60], [50,80]]     //not possible cause only 2 values needed to form a dictionary"""
+
+#zip()
+"""l1 = [1,2,3,4,5,6]
+l2 = [10,20,30,40,50,60]
+z = zip(l1, l2)
+l3 = list(z)
+z = zip(l1, l2)
+a, b = zip(*z)
+z = zip(l1, l2)
+k = zip(*z)"""

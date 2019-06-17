@@ -70,6 +70,7 @@ Slicing:
     *: repeats the Strings
     >,<,<=,>=,==: will compare ascii values //same as c
   Functions:
+    x.join(str): joins x after each character of str.
     ord('chr'): returns ascii value of chr
     chr(num): returns
     x.capitalize(): will convert first character into upper case(title case).
@@ -194,4 +195,48 @@ Dictionary:
     D.setdefault(key, value): this Function searches the specified key. If key exists, it will return its value, otherwise insert it.
     D.update(dict): used to merge elements of dictionary dict in D if the keys are unique. If the key already exists in D,
       it will overwrite the value of that key with the value specified in dict.
-    
+    D.pop(key): removes the specified key form the dictionary.
+    D.popitem(): removes the last key value pair from the dictionary and return it in the form of tuple.
+  Parsing into a dictionary:
+    eg.
+      L = [[10,20], [40,60], [50,80]]
+      D = dict(L)
+    To parse into a dictionary, there must be a container inside a container and that container must contain 2 elements it forms a pair of key and value for the dictionary.
+    If one of the key exists twice, it will overwrite the value of the key with a later pair in the container which has the same key.
+
+Set:
+  Set is unordered data structure containing only unique elements.
+  Elements in set cannot be duplicate.
+  Elements are immutable but the set is mutable.
+  set does not support indexing and slicing.
+  Data is arranged with respect to the memory address of the element.
+  While declaring a set, if multiple same elements are entered, it does not show error , it manages the set and simply remove the duplicate elements.
+  Set cannot store other containers(eg. list, tuple, etc).
+  Every element of a set is known as key.
+  Methods:
+    x.add(element): adds the element to the set.    //supports only int, float, string
+    x.update(container or element): adds all the elements of the container to the set x.
+    x.clear(): empties the set. But the set still exists.
+    x.discard(element): removes the specified element from the list. Will not give error if the element does not exist.
+    x.remove(element): removes the specified element from the list. Will give error if the element does not exist.
+    x.union(set): merge 2 sets. Will remove duplicates.
+    x.intersection(set): returns a set with elements which exists in both the sets.
+    x.difference(set)(representation: [x - set]): removes the elements from x which are common in both x and set.
+    x.issuperset(y): returns True if all the elements of y exists in x.
+    x.issubset(y): returns True if all the elements of x exists in y.
+    x.isdisjoint(y): returns True if no common elements exist in both the sets.
+
+Function zip(containers):
+  Prepares a iterable object which contains tuples which contains elements of the containers of same index.
+  Works till the index of the smaller list.
+  A zip object cannot be used more than once as it unzips all the elements stored in it. Though zip object variable still exists but it is empty.
+  Zip object can be parsed into a list or a tuple.
+
+  Tuple Unpacking:
+    eg.
+      a, b = zip(*z)
+      It returns a tuple in a and b which contains elements at 0 and 1 index respectively of all the elements of the zip object.
+
+      k = zip(*z)
+      It returns a tuple which contains all the elements of zip object in k.
+  
