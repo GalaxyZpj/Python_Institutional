@@ -222,8 +222,8 @@ Set:
     x.union(set): merge 2 sets. Will remove duplicates.
     x.intersection(set): returns a set with elements which exists in both the sets.
     x.difference(set)(representation: [x - set]): removes the elements from x which are common in both x and set.
-    x.issuperset(y): returns True if all the elements of y exists in x.
-    x.issubset(y): returns True if all the elements of x exists in y.
+    x.issuperset(y): returns True if all the elements of x exists in y.
+    x.issubset(y): returns True if all the elements of y exists in x.
     x.isdisjoint(y): returns True if no common elements exist in both the sets.
 
 Function zip(containers):
@@ -239,4 +239,34 @@ Function zip(containers):
 
       k = zip(*z)
       It returns a tuple which contains all the elements of zip object in k.
-  
+
+Creating a Function:
+  Syntax:
+    def <function_name>(parameters):
+      return value
+Taking multiple arguments in a function:
+  Use * before the parameter object. It converts the list of arguments given in the main into a tuple.
+
+Returning multiple objects:
+  The objects can be returned in the form of tuple if we return multiple objects.
+
+Modules:
+  Modules are group of functions.
+  Method to import a module:
+    import module_name
+  Creating alias for module_name:
+    import module_name as alias_name
+  Method to import a function of a module:
+    from module_name import func_name
+  Method to import multiple functions form a module:
+    from module_name import func1, func2
+
+Lambda Expressions:
+  These are also known as anonymous functions.
+  Syntax:
+    lambda(arguments): <single line statement>
+
+Single line statements:
+  L = [i for i in range(2, 20, 2)]
+  J = x if (x>y) else y
+  J = x if (x>y and x>z) else y if(y>x and y>z) else z

@@ -94,7 +94,14 @@ d = {}
 for x, y in zip(l1, l2):
     d[y] = x
 print(d)"""
-l1 = [1,2,3,4,5,6]
+"""l1 = [1,2,3,4,5,6]
 l2 = [10,20,30,40,50,60]
 z = zip(l1, l2)
-a = zip(*z)
+a = zip(*z)"""
+
+#Calculate simple interest of given amounts
+l = [7000,5000,45000,89000]
+r = 7.5
+t = 1
+c = lambda: [amt*r*t/100 for amt in l]
+print(c())

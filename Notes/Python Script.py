@@ -239,3 +239,33 @@ z = zip(l1, l2)
 a, b = zip(*z)
 z = zip(l1, l2)
 k = zip(*z)"""
+
+#Creating a function
+"""def sum(a, b):
+    c = a+b
+    return c
+k = sum(100, 200)
+print(k)"""
+
+#Taking multiple arguments
+"""def Call (*n):
+    print(n)
+Call(8, 2, 3)"""
+
+#Returning multiple values
+"""def Call(a, b):
+    s1 = a+b
+    s2 = a-b
+    s3 = a*b
+    return s1, s2, s3
+k, m, j - Call(8, 5)
+print(k, m, j)"""
+
+#Lambda Expressions
+c = lambda x, y: x+y
+k = c(80, 90)
+print(k)
+
+#Single line statements
+L = [i for i in range(2, 20, 2)]
+c = lambda x, y: x if (x>y) else y
