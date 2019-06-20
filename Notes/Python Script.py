@@ -262,10 +262,37 @@ k, m, j - Call(8, 5)
 print(k, m, j)"""
 
 #Lambda Expressions
-c = lambda x, y: x+y
+"""c = lambda x, y: x+y
 k = c(80, 90)
 print(k)
 
 #Single line statements
 L = [i for i in range(2, 20, 2)]
-c = lambda x, y: x if (x>y) else y
+c = lambda x, y: x if (x>y) else y"""
+
+#Map Function:
+"""l1 = [10,50,80,60,89,10]
+l1 = [4,7,8,9]
+k = [map(lambda x, y: x+y, l1, l2)]
+print(k)"""
+
+#Filter Function
+"""l1 = [10,40,33,56,77,81,24,57,80]
+k = [filter(lambda x:x%2 == 0, l1)]
+print(k)
+k = [filter(lambda x:(x >= 50 and x <= 90), l1)]
+print(k)"""
+
+#Reduce Function
+"""from functools import reduce
+print(reduce(lambda x, y:x+y, [100,200,30,50,70]))"""
+
+#Class
+"""class PNB:
+    def OpenAccount(self):
+        self.ano = input('Enter Account Number: ')
+        self.name = input('Enter Name: ')
+        self.balance = int(input('Enter Balance: '))
+
+    def showAccount(self):
+        print(self.ano, self.name, self.balance)"""

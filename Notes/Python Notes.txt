@@ -270,3 +270,51 @@ Single line statements:
   L = [i for i in range(2, 20, 2)]
   J = x if (x>y) else y
   J = x if (x>y and x>z) else y if(y>x and y>z) else z
+
+Map Function:
+  Syntax:
+    map(lambda...., sequence)
+  It maps all the elements of the sequence with the given function.
+  N sequences are allowed.
+
+Filter Function:
+  Syntax:
+    filter(lambda conditional expression, sequence)
+  Only includes those elements in the list which returns True for the conditional statement.
+  Only one sequence allowed.
+
+Reduce Function: (import functools required)
+  Syntax:
+    reduce(lambda args: expr, sequence)
+  Works on binary operations, so 2 parameters required in the lambda expression.
+  eg.
+    k = reduce(lambda x, y: x+y, [2,3,7,5,5])
+    In this expression, initially x and y will have 2 and 3 respectively, then will store its sum in x and y will be fetched from the next elements in the list, will add x and y again , the result again will be stored in x and next element will be stored in y and so on....
+    In the end, k will be equal to x, when there will be no elements left in the list to be stored in y.
+
+# OBJECT ORIENTED PROGRAMMING
+Class and Objects:
+  Class:
+    Classes are logical abstraction while objects have physical existence.
+    Class is a factory which is used to produce an object.
+    Syntax to define a class:
+      class <ClassName> :
+        <Data Members and Functions>
+    Specifying a Private Member:
+      Double underscore is used before the declaraton.
+      eg.
+        __(name)
+    Specifying a Protected Member:
+      Single underscore is used before the declaraton.
+      eg.
+        _(name)
+    Specifying a Public Member:
+      Normal declaration.
+  Creating an Object of a class:
+    Syntax:
+      object_name = class_name()
+  Defining a Member Function:
+    eg.
+      def funcName(self):
+      
+  Member Functions defined inside a class are normally object member functions(not class member function)

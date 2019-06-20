@@ -100,8 +100,13 @@ z = zip(l1, l2)
 a = zip(*z)"""
 
 #Calculate simple interest of given amounts
-l = [7000,5000,45000,89000]
+"""l = [7000,5000,45000,89000]
 r = 7.5
 t = 1
 c = lambda: [amt*r*t/100 for amt in l]
+print(c())"""
+
+#Pass Fail Program
+l = [60, 40, 77, 89, 56]
+c = lambda: ['Pass' if x>=60 else 'Fail' for x in l]
 print(c())
