@@ -296,3 +296,30 @@ print(reduce(lambda x, y:x+y, [100,200,30,50,70]))"""
 
     def showAccount(self):
         print(self.ano, self.name, self.balance)"""
+
+#Creating n number of objects
+class Student:
+    def getStudent(self):
+        self.rollno. = input('Enter roll no: ')
+        self.name = input('Enter name: ')
+        self.p = int(input('Enter Physics marks: '))
+        self.c = int(input('Enter Chemistry marks: '))
+        self.m = int(input('Enter Maths marks: '))
+    def putStudent(self):
+        print(self.rollno, self.name, self.p, self.c, self.m)
+    def search(self, rollno):
+        if rollno == self.__rollno:
+            self.putStudent()
+            return True
+        else: return False
+L = list()
+n = int(input('Enter no. of students: '))
+for i in range(n):
+    s = student()
+    s.getStudent()
+    L.append(s)
+rollno = input('Enter roll number to be searched: ')
+for s in L:
+    found = s.search(rollno)
+    if found:
+        break

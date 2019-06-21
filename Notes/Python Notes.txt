@@ -316,5 +316,12 @@ Class and Objects:
   Defining a Member Function:
     eg.
       def funcName(self):
-      
+      Here self references the object.
+
   Member Functions defined inside a class are normally object member functions(not class member function)
+
+  eg.
+    s = student()
+    Here s is an object which was created with the help of student() constructor.
+
+  
