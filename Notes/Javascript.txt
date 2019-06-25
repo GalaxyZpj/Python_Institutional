@@ -1,0 +1,28 @@
+JavaScript:-
+A DOM(Document Object Model)[Consists of HTML Components(textbox, checkbox, radio button, div, span, etc) and Events of Components(click, double click, change, keyup, keydown, mouse move, etc)]
+JS runs on an interpreter. Interpreter prebuilt in chrome is called V8.
+
+Features:
+    Dynamic typing
+
+Declaring a Variable:
+    var var_name = value;       //can be declared without using var keyword
+
+Operators: +,-,*,/,%
+    Relational Operators: <,>,<=,>=,==,!=
+    Logical Operators: &&,||,!
+    Assignment Operators: +=,-=,*=,/=,%=
+    Unary Operators: ++,--
+    Ternary Operator: ?
+
+Loops:
+    while, do_while, for, switch&case       //same as C
+
+Creating a Function:
+    function func_name(args) {
+
+    }
+JavaScript Functions:
+    alert('text_here'): this displays a popup in the browser with specified text in it.
+    document.getElementById('id_name'): used to assign a variable with the Component which goes by the id: 'id_name'        //this is not required in newer versions of js as now the value of the component can be directly fetched
+    id_name.attribute_name: used to access the value of the attribute from the HTML part.

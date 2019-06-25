@@ -96,3 +96,12 @@ HT represents Rich text(Bold, Italic, Hyperlink, etc)
         Attributes:
           value = any value
           selected
+    <form>: this tag is used to encapsulate the user interface in a single unit.
+      Attributes:
+        action = url
+          This Attribute move the control to specified url when user click on submit button.
+        method = get/post
+          get is used for small information, info visible on url
+          post is used for large content, info is not visible on url
+        name = anyname
+        

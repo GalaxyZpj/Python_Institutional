@@ -298,9 +298,9 @@ print(reduce(lambda x, y:x+y, [100,200,30,50,70]))"""
         print(self.ano, self.name, self.balance)"""
 
 #Creating n number of objects
-class Student:
+"""class Student:
     def getStudent(self):
-        self.rollno. = input('Enter roll no: ')
+        self.rollno = input('Enter roll no: ')
         self.name = input('Enter name: ')
         self.p = int(input('Enter Physics marks: '))
         self.c = int(input('Enter Chemistry marks: '))
@@ -308,18 +308,102 @@ class Student:
     def putStudent(self):
         print(self.rollno, self.name, self.p, self.c, self.m)
     def search(self, rollno):
-        if rollno == self.__rollno:
+        if rollno == self.rollno:
             self.putStudent()
             return True
         else: return False
 L = list()
 n = int(input('Enter no. of students: '))
 for i in range(n):
-    s = student()
+    s = Student()
     s.getStudent()
     L.append(s)
 rollno = input('Enter roll number to be searched: ')
 for s in L:
     found = s.search(rollno)
     if found:
-        break
+        break"""
+
+#Static Members and Methods
+"""class Bank:
+    __bankbalance = 0       # static member
+    def OpenAccount(self):
+        self.__acno = input('Enter Account Number: ')
+        self.__name = input('Enter Name: ')
+        self.__balance = int(input('Enter Balance: '))
+        Bank.__bankbalance += self.__balance
+
+    def ShowAccount(self):
+        print(self.__acno, self.__name, self.__balance)
+    
+    @classmethod
+    def showBankBalance(cls):
+        print('Bank Balance: ', cls.__bankbalance)
+
+l = []
+for i in range(3):
+    c = Bank()
+    c.OpenAccount()
+    L.append(c)
+
+for c in l:
+    c.ShowAccount()
+Bank.showBankBalance()"""
+
+"""class Hero:
+    __s = 0
+    __p = 0
+    __c = 0
+    def getbike(self):
+        self.id = int(input('Enter ID: '))
+        self.name = input('Enter name: ')
+        if self.name == 'splender':
+            Hero.__s += 1
+        elif self.name == 'cd deluxe':
+            Hero.__c += 1
+        elif self.name == 'passion':
+            Hero.__p += 1
+    def putbike(self):
+        print(self.id, self.name)
+    
+    @classmethod
+    def production(cls):
+        print('Total Production: ', cls.__s + cls.__p + cls.__c)"""
+
+#Object as an Argument
+"""class TwoNum:
+    def getTwoNum(self):
+        self.__x = int(input('Enter '))
+        self.__y = int(input('Enter '))
+    def putTwoNum(self):
+        print(self.__x, seld.__y)
+    def Add(self, A):
+        R = TwoNum()
+        R.__x = self.__x + A.__x
+        R.__y = self.__y + A.__y
+        return R
+T1 = TwoNum()
+T1.getTwoNum()
+T2 = TwoNum()
+T2.getTwoNum()
+T3 = T1.Add(T2)
+T1.putTwoNum()
+T2.putTwoNum()
+T3.putTwoNum()"""
+
+"""Homework:
+    1.
+    Pid
+    pname
+    type: businessman: full, service class: 20%, BPL: free
+    bill amount
+    no. of businessman
+    no. of service class
+    no. of BPL
+    total bill amount : business class, service class
+    2.
+    class Matrix
+    getmatrix(self, row, column)
+    putmatrix(self)
+    add using operator overloading
+"""

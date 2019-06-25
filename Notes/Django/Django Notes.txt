@@ -1,0 +1,8 @@
+Django
+Used for web development
+Use MVC design pattern (Model View Control)
+
+Controller: View.py
+Mapping: url.py
+
+Cycle: Browser -> url -> view -> webpage -> Browser

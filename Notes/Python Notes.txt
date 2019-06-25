@@ -323,5 +323,18 @@ Class and Objects:
   eg.
     s = student()
     Here s is an object which was created with the help of student() constructor.
+  Static Members or Class variables:
+    The members which are declared inside a class are called static members.
+    Only one copy created for the entire class and is shared by all the objects of the same class.
 
-  
+  Static Method of a class: represents the method for a class, not an object of a class.
+    Can access only static member of class.
+    Can be called using class name. 
+    Syntax:
+      @classmethod    or    @staticmethod   //at the top of the method
+      def showBankBalance(cls):     //cls used only with @classmethod, left blank for @staticmethod
+  Object as an Argument:
+    It is used to establish communication between two or more objects of same class as well as different class.
+    Using Operator Overloading:
+      
+

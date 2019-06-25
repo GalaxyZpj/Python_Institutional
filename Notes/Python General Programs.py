@@ -107,6 +107,53 @@ c = lambda: [amt*r*t/100 for amt in l]
 print(c())"""
 
 #Pass Fail Program
-l = [60, 40, 77, 89, 56]
+"""l = [60, 40, 77, 89, 56]
 c = lambda: ['Pass' if x>=60 else 'Fail' for x in l]
-print(c())
+print(c())"""
+#Filter list with strings
+"""for x in filter(lambda x: x[:3] == 'Ram', ['Gwalior', 'Rampur', 'Indore', 'Bhopal', 'Delhi', 'Banglore', 'Ramnagar']): print(x)
+"""
+#Check Prime
+"""def isprime(n):
+    l = 2
+    while(l<n):
+        if n%l == 0:
+            break
+        l+=1
+    if (l==n):
+        return True
+    else:
+        return False
+for x in filter(isprime, [1,2,3,4,5,6,7,8,9,10]):
+    print(x)
+"""
+
+#Record search using dictionary
+"""class Student:
+    def getStudent(self):
+        self.__rollno = input('Enter roll no: ')
+        self.__name = input('Enter name: ')
+        self.__p = int(input('Enter Physics marks: '))
+        self.__c = int(input('Enter Chemistry marks: '))
+        self.__m = int(input('Enter Maths marks: '))
+        return self.__rollno
+    def putStudent(self):
+        print(self.__rollno, self.__name, self.__p, self.__c, self.__m)
+    def search(self, min, max):
+        per = (self.__p + self.__c + self.__m)
+
+D = {}
+n = int(input('Enter Number of Students: '))
+for i in range(n):
+    s = Student()
+    key = s.getStudent()
+    D.setdefault(key, s)
+rollno = input('Enter number you want to search: ')
+s = D.get(rollno, 'Not Found')
+if isinstance(s, Student):
+    s.putStudent()
+else:
+    print(s)
+L = [D.values()]
+result = [filter(lambda s: s.search(50, 100), L)]
+for x """
