@@ -2,7 +2,51 @@ Django
 Used for web development
 Use MVC design pattern (Model View Control)
 
-Controller: View.py
-Mapping: url.py
+Controller: views.py
+Mapping: urls.py
 
 Cycle: Browser -> url -> view -> webpage -> Browser
+
+Initial WorkFlow:
+    Initials:
+        Terminal: $django-admin startproject project_name       //start the project and create its files
+        Terminal: cd project_directory
+        Terminal: python3 manage.py runserever      //to start the server
+    views.py
+        Create a file named views.py inside 'BASE_DIR->project_name'
+        Open the required libraries and create required functions (actions)
+    urls.py
+        Now import views in url.py and create urls for actions
+        For templates, create a folder named templates in BASE_DIR. This folder will contain all the web pages or scripts.
+    settings.py
+        Go to settings.py to include templates folder in the project
+    templates
+        Work with the templates inside action definations in views.py
+        In a HTML file, within the form tag, specify the target function from views.py under the attribute action 
+        Modify the HTML and views.py relatively
+    Miscellneous
+        Change the TIME_ZONE to 'Asia/Kolkata' in settings.py
+        Errors can be checked live in the terminal/cmd
+
+views.py: 
+    This file is created manually.
+    This file contains all the functions (actions).
+    This file uses a function which can render url calls
+        from django.http import HttpResponse      //it is used to directly used to send HTML contents in its argument
+        from django.shortcuts import render     //it is used to render HTML files from templates folder
+    HttpResponse: this object is used to send the response to client in the form of text and html.
+    Syntax for a action defination:
+        def action_name(request):
+
+url.py:
+    First import your views.py as follows:
+        from . import views
+    This is used to call actions from views.py and map them. 
+    Inside urlpatterns, url path to all the actions are linked.
+
+templates:
+    This folder is created manually.
+    It contains all the webpages and scripts which are to be rendered.
+    Inside the HTML file, under the form tag in its attribute action, link the function from views.py as below:
+        <form action = '/func_name'>
+        

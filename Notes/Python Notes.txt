@@ -337,4 +337,19 @@ Class and Objects:
     It is used to establish communication between two or more objects of same class as well as different class.
     Using Operator Overloading:
       
+  Constructors:
+    They are used to instantiate(Memory allocation) as well as initiate an object at the time of object declaration.
+    Constructor invoke automatically when an object is decalred.
+    Syntax:
+      def __init__(self):   //this function is itself known as a constructor
+  Deleting an Object:
+    Syntax:
+      del <object_name>
+    This will clear the existance of the object from the memory.
+  Destructor:
+    Will invoke automatically before deletion of the location of the object.
+    Syntax:
+      def __del__(self):    //this is known as a Destructor
+    
+    
 

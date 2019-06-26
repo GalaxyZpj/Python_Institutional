@@ -391,19 +391,45 @@ T1.putTwoNum()
 T2.putTwoNum()
 T3.putTwoNum()"""
 
-"""Homework:
-    1.
-    Pid
-    pname
-    type: businessman: full, service class: 20%, BPL: free
-    bill amount
-    no. of businessman
-    no. of service class
-    no. of BPL
-    total bill amount : business class, service class
-    2.
-    class Matrix
-    getmatrix(self, row, column)
-    putmatrix(self)
-    add using operator overloading
+#Constructor & Destructor
+"""class Car:
+    def __init__(self, name, price):
+        self.__name = name
+        self.__price = price
+    def getCar(self):
+        self.__name = input("Enter Name: ")
+        self.__price = int(input('Enter Price: '))
+    def showCar(self):
+        print(self.__name, ':', self.__price)
+    def __del__(self):
+        print('Destroyed Car', self.__name)
+c = Car('Honda City', 1400000)
+c.showCar()
+del c
+c.getCar()
+c.showCar()
 """
+
+#AlienGame
+points = 0
+class Alien:
+    def __init__(self, name, point):
+        self.name = name
+        self.point = point
+        print(f'Alien {self.name} Created.')
+    """@classmethod
+    def addPoint(cls):
+        cls.__points += Alien.__points
+    @classmethod"""
+    def showPoint():
+        global points
+        print('Points: ',points)
+    def __del__(self):
+        print(self.name, 'Destroyed.')
+        global points
+        points += self.point
+a = Alien('Pranav', 5)
+b = Alien('Harsh', 10)
+del a
+del b
+Alien.showPoint()
