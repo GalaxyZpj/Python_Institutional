@@ -411,25 +411,50 @@ c.showCar()
 """
 
 #AlienGame
-points = 0
-class Alien:
+"""class Alien:
+    points = 0
     def __init__(self, name, point):
         self.name = name
         self.point = point
         print(f'Alien {self.name} Created.')
-    """@classmethod
-    def addPoint(cls):
-        cls.__points += Alien.__points
-    @classmethod"""
-    def showPoint():
-        global points
-        print('Points: ',points)
+    @classmethod
+    def showPoint(cls):
+        print('Points: ',Alien.points)
     def __del__(self):
         print(self.name, 'Destroyed.')
-        global points
-        points += self.point
+        Alien.points += self.point
 a = Alien('Pranav', 5)
 b = Alien('Harsh', 10)
 del a
 del b
-Alien.showPoint()
+Alien.showPoint()"""
+
+#Inheritance
+"""class Student:
+    def getStudent(self):
+        self.__rollno = input('Enter Roll Number: ')
+        self.__name = input('Enter Name: ')
+    def putStudent(self):
+        print(self.__rollno, self.__name)
+class Bsc(Student):
+    def getBsc(self):
+        self.getStudent()
+        self._p = int(input('Enter Physics: '))
+        self._c = int(input('Enter Chemistry: '))
+        self._m = int(input('Enter Math: '))
+    def putBsc(self):
+        self.putStudent()
+        print(self._p, self._c, self._m)       
+# s = Bsc()
+# s.getBsc()
+# s.putBsc()
+class Result(Bsc):
+    def getResult(self):
+        self.getBsc()
+        self.__total = self._p + self._c + self._m
+    def putResult(self):
+        self.putBsc()
+        print('Total: ', self.__total)
+s = Result()
+s.getResult()
+s.putResult()"""

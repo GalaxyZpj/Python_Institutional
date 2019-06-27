@@ -49,4 +49,14 @@ templates:
     It contains all the webpages and scripts which are to be rendered.
     Inside the HTML file, under the form tag in its attribute action, link the function from views.py as below:
         <form action = '/func_name'>
-        
+
+Adding other resources:
+    Create a folder named asset in BASE_DIR.
+    Go to settings.py and at the end of the file, add:
+    STATICFILES_DIRS = (                            //links the asset folder to static
+        os.path.join(BASE_DIR, "asset"),
+    )
+    Go to urls.py and at the end of the file, add:
+        urlpatterns += staticfiles_urlpatterns()        //
+    Import the following in urls.py:
+        from django.contrib.staticfiles.urls import staticfiles_urlpatterns     //

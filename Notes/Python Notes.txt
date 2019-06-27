@@ -351,5 +351,16 @@ Class and Objects:
     Syntax:
       def __del__(self):    //this is known as a Destructor
     
+  Inheritance:
+    Used for Genrelization and Specialization
+    Types of Inheritance:
+      Single Inheritance
+      MultiLevel Inheritance
+      Heirichal Inheritance
+      Multiple Inheritance
+      Hybrid Inheritance
+    Syntax for Derived Class:
+      class derived_class(base_class):
+    Every type of member of base class (protected, public) becomes public and protected for derived class.
+    Private Members are not Inheritable for derived class.
     
-
