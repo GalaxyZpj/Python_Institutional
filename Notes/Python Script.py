@@ -458,3 +458,45 @@ class Result(Bsc):
 s = Result()
 s.getResult()
 s.putResult()"""
+#Multiple Inheritance
+"""class ProductionOne:
+    def getProductionOne(self):
+        self._one = int(input('Enter Production One: '))
+    def showProductionOne(self):
+        print('Production One: ', self._one)
+class ProductionTwo:
+    def getProductionTwo(self):
+        self._two = int(input('Enter Production Two: '))
+    def showProductionTwo(self):
+        print('Production Two: ', self._two)
+class TotalProduction(ProductionOne, ProductionTwo):
+    def totalProduction(self):
+        self.getProductionOne()
+        self.getProductionTwo()
+        self.__total = self._one + self._two
+    def showTotalProduction(self):
+        self.showProductionOne()
+        self.showProductionTwo()
+        print('Total Production: ', self.__total)
+t = TotalProduction()
+t.totalProduction()
+t.showTotalProduction()"""
+# MultiLevel Inheritance
+"""class Employee:
+    def getEmployee(self):
+        self.__id = input('Enter ID: ')
+        self.__name = input('Enter Name: ')
+        self.__salary = int(input('Enter Salary: '))
+        return self.__salary
+class Perks(Employee):
+    def returnTotal(self):
+        s = self.getEmployee()
+        self.__da = s * 0.5
+        self.__hra = s * 0.16
+        self.__pf = s * 0.05
+        return self.__da + self.__hra - self.__pf
+class NetSalary(Perks):
+    def netShow(self):
+        print('Net Salary: ', self.returnTotal())
+e = NetSalary()
+e.netShow()"""

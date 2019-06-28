@@ -1,27 +1,61 @@
 <html>
-    <form action="/rCode">
-        <div>
-            Choose Language: 
-            <select name="language" id="language">
-                    <option value="4">C</option>
-                    <option value="10">C++</option>
-                    <option value="26">Java</option>
-                    <option value="29">Javascript</option>
-                    <option value="34">Python</option>
-            </select>
-            <div align = "right">
-                <b>QUESTION</b>
-            </div>
-        </div>
+    <form action="/result">
+        <center>
+            <img src="/static/1.png" height="30%" width = "17%"> <br><br>
+        
+        <table>
+            <caption><b><h1>STUDENT DETAILS</h1></b></caption>
+            <tr>
+                <td><b>Student Roll No:</b></td>
+                <td><input type="text" name = 'rn'></td>
+            </tr>
+            <tr>
+                <td><b>Student Name:</b></td>
+                <td><input type="text" name = 'sn'></td><br><br>
+            </tr>
+            <tr>
+                <td><b>Student Father's Name:</b></td>
+                <td><input type="text" name = 'fn'></td>
+            </tr>
+            <tr>
+                <td><b>Gender:</b></td>
+                <td>
+                    <input type="radio" name = 'gen' value="Male"> Male
+                    <input type="radio" name = 'gen' value="Female"> Female                  
+                </td>
+            </tr>
+            <tr>
+                <td><b>School Name:</b></td>
+                <td><input type="text" name = 'sch'></td>
+            </tr>
+            <tr>
+                <td><b>Hindi:</b></td>
+                <td><input type="text" name = 'Hindi'></td>
+            </tr>
+            <tr>
+                    <td><b>English:</b></td>
+                    <td><input type="text" name = 'English'></td>
+            </tr>
+            <tr>
+                    <td><b>Maths:</b></td>
+                    <td><input type="text" name = 'Maths'></td>
+            </tr>
+            <tr>
+                    <td><b>Physics:</b></td>
+                    <td><input type="text" name = 'Physics'></td>
+            </tr>
+            <tr>
+                <td><b>Chemistry:</b></td>
+                <td><input type="text" name = 'Chemistry'></td>
+            </tr>
+        </table>
         <br>
-        <div>
-            <textarea name="code" id="code" cols="100" rows="30"></textarea>
-        </div>
-        <br>
-        <input type="submit" name = "subcode">
-        <br><br>
-        <div>
-            <b>OUTPUT</b>
-        </div>
+        <input type="submit">
+        <br><br><br>
+        {% block result %}
+
+        {% endblock %}
+    </center>
     </form>
-</html>
+    
+    </html>

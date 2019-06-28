@@ -1,0 +1,77 @@
+{% extends "student.html" %}
+    
+{% block result %}
+    <table width = "50%" border = "1">
+        <caption><h1>STUDENT INFO</h1></caption>
+        <tr>
+            <td><b>Name: </b></td>
+            <td>{{n}}</td>
+        </tr>
+        <tr>
+            <td><b>Roll No: </b></td>
+            <td>{{rollno}}</td>
+        </tr>
+        <tr>
+            <td><b>Father's Name: </b></td>
+            <td>{{fn}}</td>
+        </tr>
+        <tr>
+            <td><b>Gender: </b></td>
+            <td>{{gender}}</td>
+        </tr>
+        <tr>
+            <td><b>School Name: </b></td>
+            <td>{{schoolname}}</td>
+        </tr>
+    </table>
+    <br><br><br>
+
+    <table width = "60%" border = "1">
+        <caption><h1><b>RESULT</b></h1></caption>
+
+        <tr>
+            <th>Subject Code</th>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+            <th>Remark</th>
+        </tr>
+        <tr>
+            <td><b>101</b></td>
+            <td><b>Hindi</b></td>
+            <td>{{hindi}}</td>
+            <td>{{ghindi}}</td>
+            <td>{{rhindi}}</td>
+        </tr>
+        <tr>
+            <td><b>201</b></td>
+            <td><b>English</b></td>
+            <td>{{english}}</td>
+            <td>{{genglish}}</td>
+            <td>{{renglish}}</td>
+        </tr>
+        <tr>
+            <td><b>301</b></td>
+            <td><b>Maths</b></td>
+            <td>{{maths}}</td>
+            <td>{{gmaths}}</td>
+            <td>{{rmaths}}</td>
+        </tr>
+        <tr>
+            <td><b>401</b></td>
+            <td><b>Physics</b></td>
+            <td>{{physics}}</td>
+            <td>{{gphysics}}</td>
+            <td>{{rphysics}}</td>
+        </tr>
+        <tr>
+            <td><b>501</b></td>
+            <td><b>Chemistry</b></td>
+            <td>{{chemistry}}</td>
+            <td>{{gchemistry}}</td>
+            <td>{{rchemistry}}</td>
+        </tr>        
+    </table><br><br>
+    <h3>Remark: <b>{{remark}}</b></h3>
+    <br><br>
+{% endblock %}

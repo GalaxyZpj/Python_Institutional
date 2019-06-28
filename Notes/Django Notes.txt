@@ -50,13 +50,22 @@ templates:
     Inside the HTML file, under the form tag in its attribute action, link the function from views.py as below:
         <form action = '/func_name'>
 
+Template Tags: Tags used in template files.
+    {{key_name}}: Used to access elements in dictionary rendered by the actions of views.py in the template file.
+    {% extends "base.html" %}: Used to extend the base html file , display the contents of this template in continuation of base.html.
+    {% block block_name %}, {% endblock %}: Used to reference content position of the extended template file.
+
 Adding other resources:
     Create a folder named asset in BASE_DIR.
     Go to settings.py and at the end of the file, add:
     STATICFILES_DIRS = (                            //links the asset folder to static
         os.path.join(BASE_DIR, "asset"),
     )
-    Go to urls.py and at the end of the file, add:
-        urlpatterns += staticfiles_urlpatterns()        //
     Import the following in urls.py:
-        from django.contrib.staticfiles.urls import staticfiles_urlpatterns     //
+        from django.contrib.staticfiles.urls import staticfiles_urlpatterns     //adds access to staticfiles to urlpatterns
+    Go at the end of urls.py, then add:
+        urlpatterns += staticfiles_urlpatterns()        //adds static file path to urlpatterns
+    
+    Inserting image in the template:
+        <img src="/static/1.jpg">
+    
