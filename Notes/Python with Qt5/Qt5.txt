@@ -1,0 +1,31 @@
+Qt5: GUI Programming with Python
+
+Import:
+    import sys
+    import PyQt5
+    from PyQt5.QtWidgets import *
+
+Functions:
+    x = QApplication(sys.argv): initiate application
+    x = QWidget(): Declare a widget
+    x.resize(length, width): adjust size of the window
+    x.move(300, 500): define position of the window.
+    x.setWindowTitle('String'): set title for the window.
+    fl = QFormLayout(): set the layout of the window contents in the form of rows.
+    fl = QGridLayout(): set the layout of the window contents in the form of rows and columns.
+    w.setLayout(fl): change the window layout to fl.
+    L1 = QLabel('See Here'): used to display contents in the window.
+    fl.addRow("Message", L1): add row to the window and display specified elements.
+    T1 = QLineEdit(): used to display a textbox.
+    Box_Gen = QHBoxLayout(): used to declare a box which can have multiple widgets in it.
+    m = QRadioButton("Male"): declare radio button.
+    Box_Gen.addWidget(m): used to add widget to QHBoxLayout.
+    CB = QComboBox(): used to declare a check list.
+    CB.addItem("Manager"): used to add elements to QComboBox.
+    CB.addItems(List): used to add multiple items together to QComboBox.
+    QPixmap('1.jpg'): used to add picture 
+
+
+
+    x.show(): display the app window.
+    sys.exit

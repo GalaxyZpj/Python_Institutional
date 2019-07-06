@@ -1,0 +1,103 @@
+DataBase Management System
+
+Data: 
+    Collection of raw facts and figures.
+Fields: A piece of information related to an object. eg: AccountNo, DOB, Gender, email, mobile, etc.
+Record: Collection of fields.
+DataBase file: Collection of Records.
+
+# MySQL:
+
+Type:
+    varchar(size)
+    char(size)
+    numeric(n, dec)/ intefer/ double/ decimal
+    date
+    datetime
+
+MySQL uses DBO(DataBase Object) engine.
+
+
+SQL Commands:
+    To create Database:
+        create database databaseName;
+    To use database:
+        use databaseName;
+    To show existing databases:
+        show databases;
+    To show existing tables in a database:
+        show tables;
+    To create Table:
+        create table <table_name> (<colname> <type> (size) [primary key], <colname> <type>(size) ____);
+    To insert values in a table:
+        insert into tableName values (these values will be in the same order as the columns. varchar, char, date will be in single quotes.)
+    To insert into specified columns only:
+        insert into tablename 
+    
+Connect to database from a python script:
+    conn = sql.connect(host = 'localhost', port = 3306, user = 'root', password = '12345678', db = 'Practice')
+    Here conn is a arbitary variable which holds the query of reference to the database.
+
+    cmd = conn.cursor()
+    Here cursor is a function which is used to create command object which is used to supply sql quries to database engine.
+    cmd is a arbitary variable.
+
+    row = cmd.fetchall()        will form a list of the data
+    
+
+Group Functions:
+    Sum()
+    Avg()
+    min()
+    max()
+    count()
+
+Select Statement:
+    select * / <colname> from <tableName> 
+    [where <condition>] 
+    [where <colname> [NOT] like %]
+    [where <colname> [NOT] in (v1, v2, v3)]
+    [where <colname> [NOT] between v1 and v2]
+    [order by [DESC] <colname1, 2,....>]
+    [group by <colname1, 2,.....> having <condition>]
+    eg.
+        select * from tablename     //show complete table
+        select ProductID, ProductName from tableName        //show only 2 specified columns 
+        select * from tableName where ProductID = 7         //show all columns where ProductID = 7
+        select * from tableName where ProductName = 'L'     //show all columns where ProductID = 'L'
+        select * from tableName where price >= 1000 and price <= 100000
+        select * from tableName where ProductPrice > 10000 and ProductDate > '2017-02-02'
+        select * from tableName where ProductName like 'a%'         //show all columns where ProductName starts with 'a'
+        select * from tableName where ProductName like '%ing%'      //show all columns where ProductName has the string 'ing'
+        select * from tableName where city not like '%pur'      //show all columns where city doesnot end with pur
+        select * from tableName where city like '___'       //will show where city has 3 or less characters
+        select * from tableName where city like '_a%'       //will show where city has 2nd character 'a'
+        select * from tableName where city like '__UN'      //will show where city has 4 or less characters and ends with 'UN'
+        select salary, salary*50/100 as DA, salary*16/100 as HRA from tableName
+        select * from Customer whose city in ('Mumbai', 'Gwalior')
+        select * from Customer where amountpaid between 10000 and 500000
+                                    or
+                                where amountpaid >= 10000 and amountpaid < 500000
+        select department from Employee group by department         //doesnot show duplicate entries
+        select Sum(salary), min(salary), max(salary), count(*), department from employee group by department
+        select EmployeeName from employee order by EmployeeName         //show in ascending order
+        select EmployeeName from employee order by EmployeeName desc        //show in descending order
+
+Delete Statement:
+    delete from <tableName>
+    [where <condition>]
+    [where <colname> [NOT] like '%_']
+    [where <colname> [NOT] between v1 and v2]
+    [where <colname> [NOT] in (v1, v2,......)]
+
+Update Statement:
+    update tableName set <colname> = value, <colname> = value .....
+    [where <condition>]
+    [where [NOT] [like] [in] [between]]
+    eg.
+        update product set productPrice = productprice - (productprice*40/100) where productid = 7
+
+
+
+stdlib.h
+atoi, atof, atol, atod.

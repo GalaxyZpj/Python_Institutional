@@ -96,6 +96,7 @@ HT represents Rich text(Bold, Italic, Hyperlink, etc)
         Attributes:
           value = any value
           selected
+          
     <form>: this tag is used to encapsulate the user interface in a single unit.
       Attributes:
         action = url

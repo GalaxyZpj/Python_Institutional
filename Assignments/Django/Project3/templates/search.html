@@ -1,0 +1,21 @@
+<html>
+    <form action="/searchOut">
+        <center>
+            <h1><font color = "blue">Search Record</font></h1>
+            <table cellpadding = "20">
+                <tr>
+                    <td><h3>Account Number: </h3></td>
+                    <td><input type="text" name = "s_accno"></td>
+                </tr>
+                <tr>
+                    <td><h3>Password: </h3></td>
+                    <td><input type="password" name = "s_pass"></td>
+                </tr>
+            </table>
+            <input type="submit">
+            <br><br><br><br>
+            {% block output %}
+            {% endblock %}
+        </center>
+    </form>
+</html>

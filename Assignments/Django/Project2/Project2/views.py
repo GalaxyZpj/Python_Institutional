@@ -41,9 +41,12 @@ def student_result(request):
     else:
         if Grades.count('A+') > 3: remark = 'DISTINCTION'
         else: remark = 'PASS'
+    if request.GET['gen'] == 'Male': s = 'S/O'
+    else: s = 'D/O'
 
     d = {
         'rollno': request.GET['rn'], 
+        's': s,
         'n': request.GET['sn'], 
         'fn': request.GET['fn'], 
         'gender': request.GET['gen'], 

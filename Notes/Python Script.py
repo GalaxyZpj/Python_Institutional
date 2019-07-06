@@ -500,3 +500,76 @@ class NetSalary(Perks):
         print('Net Salary: ', self.returnTotal())
 e = NetSalary()
 e.netShow()"""
+#Abstraction
+"""from abc import ABC, abstractmethod
+class Student(ABC):
+    @abstractmethod
+    def Get(self):
+        pass
+    def Put(self):
+        pass
+class Bsc(Student):
+    def Get(self):
+        self.__rollno = input('Enter Roll Number: ')
+        self.__name = input('Enter Name: ')
+        self.__p = int(input('Enter Physics: '))
+        self.__c = int(input('Enter Chemistry: '))
+        self.__m = int(input('Enter Math: '))
+    def Put(self):
+        print(self.__p, self.__c, self.__m)   
+class Ba(Student):
+    def Get(self):
+        self.__rollno = input('Enter Roll Number: ')
+        self.__name = input('Enter Name: ')
+        self.__h = int(input('Enter History: '))
+        self.__g = int(input('Enter Geography: '))
+        self.__e = int(input('Enter Economics: '))
+    def Put(self):
+        print(self.__h, self.__g, self.__e)     
+L = [Bsc(), Bsc(), Ba(), Ba()]
+for student in L:
+    student.Get()
+    student.Put()"""
+
+"""from abc import ABC, abstractmethod
+class Shapes(ABC):
+    @abstractmethod
+    def getDimentions(self):
+        pass
+    @abstractmethod
+    def area(self):
+        pass
+class Triangle(Shapes):
+    def getDimentions(self):
+        self.height = int(input('Enter Height: '))
+        self.base = int(input('Enter Base: '))
+    def area(self):
+        print('Area of the triangle is:', 0.5*self.height*self.base)
+class Rectangle(Shapes):
+    def getDimentions(self):
+        self.length = int(input('Enter Length: '))
+        self.breadth = int(input('Enter Breadth: '))
+    def area(self):
+        print('Area of the rectangle is:', self.length*self.breadth)
+r = Rectangle()
+r.getDimentions()
+r.area()
+t = Triangle()
+t.getDimentions()
+t.area()"""
+
+#Exception Handling
+
+"""try:
+    v = int(input("Enter Any Value: "))
+    print(v)
+except Exception as e:
+    print('Invalid Input.', e)"""
+
+"""while True:
+    try:
+        v1 = int(input('Enter Any Value: '))
+        print(v1)
+        break
+    except ValueError as e:
+        print('Invalid Input', e)"""

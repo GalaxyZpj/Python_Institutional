@@ -1,0 +1,44 @@
+<html>
+    <form action="/submit">
+        <center>
+            <h1><font color = "blue">Locker Registration Form</font></h1>
+            <table cellpadding = "20">
+                <tr>
+                    <td>Account Number: </td>
+                    <td><input type="text" name = "accno"></td>
+                </tr>
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type="text" name = "fn"></td>
+                </tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td><input type="text" name = "ln"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth: </td>
+                    <td><input type="date" name = "dob"></td>
+                </tr>
+                <tr>
+                    <td>Gender: </td>
+                    <td><input type="radio" name = "gen" value = "Male"> Male &nbsp;&nbsp;<input type="radio" name = "gen" value = "Female"> Female</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number: </td>
+                    <td><input type="text" name = "mob"></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="email" name = "email"></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name = "pass"></td>
+                </tr>
+            </table><br>
+            <input type="submit">
+            {% block output %}
+            {% endblock %}
+        </center>
+    </form>
+</html>

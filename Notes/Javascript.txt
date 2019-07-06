@@ -22,6 +22,33 @@ Creating a Function:
     function func_name(args) {
 
     }
+String Functions:
+    length: calculate length of string.
+        x.length 
+    char charAt(index): return the character from the specified index in a string.
+        j = "Pranav"
+        x = j.charAt(2)
+    int charCodeAt(index): returns the ascii value of the character from the specified index in a string.
+        x = j .charCodeAt(1)
+    int indexOf(char/substring, [positon]): returns index of specified character or substring.
+        i = j.indexOf('a')
+        i = j.indexOf('a', i+1)
+    int lastIndexOf(char/substring, [positon]): searches in reverse direction.
+    substring(index/(si, ei)): reads the string from specified index.
+        i = j.substring(4, 7)
+    startsWith(substr): 
+    endWith(substr): 
+    [] split(","): 
+    toUpperCase():
+    toLowerCase():
+
+select attributes:
+    selectedIndex
+    options[index].text
+    options[index].value
+    add(options)
+    remove(index)
+
 JavaScript Functions:
     alert('text_here'): this displays a popup in the browser with specified text in it.
     document.getElementById('id_name'): used to assign a variable with the Component which goes by the id: 'id_name'        //this is not required in newer versions of js as now the value of the component can be directly fetched
