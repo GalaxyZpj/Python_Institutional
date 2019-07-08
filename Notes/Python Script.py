@@ -573,3 +573,38 @@ except Exception as e:
         break
     except ValueError as e:
         print('Invalid Input', e)"""
+
+# File Handling
+"""f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/1.txt', 'w')    #create a file in write mode
+f.write('LG')
+f.write('Samsung')
+f.close()"""
+
+"""f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/1.txt', 'a')    #create a file in write mode
+while True:
+    name = input('Enter Name: ')
+    if name == '': break
+    f.write(name)
+    f.write('\n')
+f.close()"""
+
+"""f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/1.txt', 'r')
+data = f.read()
+print(data)
+f.close()"""
+
+from time import sleep as s
+"""f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/1.txt', 'r')
+while True:
+    data = f.read(1)
+    if data == '': break
+    print(data)
+    s(0.5)
+f.close()"""
+
+f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/students.txt', 'a')
+while True:
+    record = input('Enter Roll Number, Name and P, C, M Marks: ')
+    if record == '': break
+    f.write(record)
+f.close()

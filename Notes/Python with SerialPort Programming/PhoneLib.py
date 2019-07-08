@@ -32,11 +32,13 @@ class PhoneLib:
     def ReadMessage(self):
         data = self.serial.readline()
         time.sleep(0.5)
-        print(data.decode())
+        if data.deode() == '+CMT':
+            l = data.decode().split("\"")
+        print(l)
         msg = self.serial.readline()
         time.sleep(0.5)
         print(msg.decode())
-
+        return l[1], msg.decode()
     def Close(self):
         self.serial.close()
 
@@ -46,5 +48,5 @@ PH.Connect('COM4')
 #PH.SendSms("9301123085", 'Hi')
 PH.SetReadSettings()
 while True:
-    PH.ReadMessage()
+    T = PH.ReadMessage()
 input()

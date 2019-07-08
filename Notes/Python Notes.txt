@@ -385,3 +385,21 @@ Exception Handling:
     ValueError
     MisMatchError
     IndexError
+
+File Handling:
+  Methods:
+    open(): open the file in various modes.
+    write(text): store text in file.
+    writeline(text): store text in file with new line at the end.
+    read([n]): read from file.
+    readline(): read a single line from a file.
+    close(): close the file.
+  Modes: 
+    w: write  //create new file if file dosen't exist and open it in write mode.
+    r: read   
+    a: append   //create new file if file dosen't exist and open it in append mode.
+    wb: write binary
+    rb: read binary
+  Syntax:
+    open(filename, mode)
+  
