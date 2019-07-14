@@ -69,3 +69,7 @@ Adding other resources:
     Inserting image in the template:
         <img src="/static/1.jpg">
     
+Session Buffer: 
+    It is a special memory area of buffer which is automatically created on client machine when user open a web browser.
+    This buffer is further used ny server to track the client information.
+    Information which is stored in session is shared in whole web application.

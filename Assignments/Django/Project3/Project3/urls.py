@@ -16,10 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
     path('choice/', views.redirect),
-    path('submit/', views.formToDatabase),
-    path('searchOut', views.searchRecord)
+    path('logincheck/', views.loginCheck),
+    path('submit/', views.registration),
+    path('searchCustomer', views.searchCustomer),
+    path('showCustomers/', views.showCustomers),
+    path('searchEmployee', views.searchEmployee),
+    path('showEmployees/', views.showEmployees),
+    path('initiateSessionView/', views.initiateSessionView),
+    path('initiateLockerSession/', views.initiateLockerSession),
+    path('remote/', views.remote),
+    path('connect/', views.connect),
 ]
+urlpatterns += staticfiles_urlpatterns()

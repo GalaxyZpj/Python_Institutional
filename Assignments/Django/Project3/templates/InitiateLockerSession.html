@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <form action="/initiateLockerSession">
+            <center>
+                <table>
+                    <tr>
+                        <td><b>Account Number:&nbsp;&nbsp;</b></td>
+                        <td><input type="text" name='accno' value="{{accno}}"></td>
+                    </tr>
+                </table>
+                <br><br><input type="submit" name='send' value = "Start"><br><br><br>
+                {% if wall.0 == 'True' %}
+                <font color="green"><b>Locker Access Granted for Account Number: {{accno}}<br><br>Press here to end session</b></font><br><br>
+                <input type="submit" name='send' value="Stop">
+                {% endif %}
+                <font color="blue"><b>{{msg}}</b></font>
+            </center>
+        </form>
+    </body>
+</html>

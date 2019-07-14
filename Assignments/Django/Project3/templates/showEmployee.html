@@ -1,0 +1,50 @@
+<html>
+    <head></head>
+
+    <body>
+        <form action="\showEmployees">
+            <center>
+                <h2>Click below to generate all stored records</h2><br>
+                <input type="submit">
+                <br><br><br>
+                <table border = "2" cellpadding = "20">
+                    <tr>
+                        <th>EmployeeID</th>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Designation</th>
+                        <th>Email</th>
+                        <th>MobileNo</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Admin Verified</th>
+                    </tr>
+                    {% for x in d %}
+                    <tr>
+                        <td>{{x.0}}</td>
+                        <td>{{x.1}}</td>
+                        <td>{{x.2}}</td>
+                        <td>{{x.3}}</td>
+                        <td>{{x.4}}</td>
+                        <td>{{x.5}}</td>
+                        <td>{{x.7}}</td>
+                        <td>{{x.8}}</td>
+                        <td>{{x.9}}</td>
+                        <td>{{x.10}}</td>
+                        <td align="center">
+                            {{x.11}}<br><br>
+                            {% if x.11 == 'No' %}
+                                Push this button to verify the customer.<br><br>
+                                <input type="submit" name = 'setVerify' value="{{x.5}}">
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <h2>{{err}}</h2>
+                </table>
+            </center>
+        </form>
+    </body>
+</html>

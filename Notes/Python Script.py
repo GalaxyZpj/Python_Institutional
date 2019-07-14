@@ -593,18 +593,90 @@ data = f.read()
 print(data)
 f.close()"""
 
-from time import sleep as s
-"""f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/1.txt', 'r')
+"""from time import sleep as s
+f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/1.txt', 'r')
 while True:
     data = f.read(1)
     if data == '': break
     print(data)
     s(0.5)
-f.close()"""
+f.close()
 
 f = open('/Users/pranavjain/Github/Python_Institutional/Notes/File Handling/students.txt', 'a')
 while True:
     record = input('Enter Roll Number, Name and P, C, M Marks: ')
     if record == '': break
     f.write(record)
-f.close()
+f.close()"""
+
+
+# Threading
+import threading
+import random
+from time import sleep
+# Printer
+"""class Printer(threading.Thread):
+    def run(self):
+        lock.acquire()
+        print(self.getName())
+        sleep(0.5)
+        lock.release()
+lock = threading.Lock()
+u1 = Printer()
+u2 = Printer()
+u3 = Printer()
+u1.setName('Hello')
+u2.setName('Hi')
+u3.setName('Bye')
+u1.start()
+u2.start()
+u3.start()
+"""
+# Spell Checker
+"""
+class SpellChecker(threading.Thread):
+    def init(self):
+        self.list = ['tool', 'setup', 'utilities']
+        self.x = ''
+    def run(self):
+            while True:
+                if self.x in self.list: 
+                    print('OK')
+                    
+                else: 
+                    print('Not Found')
+word = SpellChecker()
+word.init()
+word.start()
+while True:
+    word.x = input('Enter word: ')
+"""
+# MatchStick Game
+class Dice(threading.Thread):
+    dice = [1]*10
+    def init(self):
+        self.inp = 'random'
+    def run(self):
+        while True:
+            self.turn = random.choice(range(0, 10))
+            if self.inp != 'random':
+                Dice.dice[self.turn] = 0
+                self.inp = 'random'
+x = Dice()
+x.init()
+x.setDaemon(True)
+print(Dice.dice)
+x.start()
+winner = 0
+while True:
+    print(':: Player 1 ::')
+    x.inp = input('Press ENTER to ROLL: ')
+    winner = 1
+    print('\n', Dice.dice, '\n')
+    if all(x==0 for x in Dice.dice): break
+    print(':: Player 2 ::')
+    x.inp = input('Press ENTER to ROLL: ')
+    winner = 2
+    print('\n', Dice.dice, '\n')
+    if all(x==0 for x in Dice.dice): break
+print(f"\n\nPlayer {winner} wins!\n\n")

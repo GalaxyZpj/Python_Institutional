@@ -373,6 +373,7 @@ Class and Objects:
       Before defining a function, function decorator '@abstractmethod' must be used.
     Explaination:
       When an object of the derived class is created and its function is called, it jumps to the abstract class of that derived class, creates a memory heap for that abstract function which is used by all the objects of the derived classes.
+
 Exception Handling:
   Used to control runtime errors.
   It is managed by following keywords:
@@ -394,6 +395,10 @@ File Handling:
     read([n]): read from file.
     readline(): read a single line from a file.
     close(): close the file.
+    seek(no of bytes, [starting position]): for starting position, 
+      0: beginning of the file
+      1: current position
+      2: end of the file
   Modes: 
     w: write  //create new file if file dosen't exist and open it in write mode.
     r: read   
@@ -402,4 +407,70 @@ File Handling:
     rb: read binary
   Syntax:
     open(filename, mode)
-  
+
+Threading:
+  It is used to execute more than one process simulteneously in a roundrobin fashion.
+  Importing threading module:
+    import threading
+  Syntax for implementing a thread:
+    thread_name = threading.Thread(target=function_name, [args=(parameters seperated by comma)], [name = 'thread_name'])
+  Threading Functions:
+    threading.current_thread().getName(): returns the name of the thread.
+  Thread Methods:
+    run(): used to implement the thread process.
+    start(): used to call the run method.
+    setName(): used to set name for the thread.
+    getName(): used to fetch name for the thread.
+  Instantiating a thread class:
+    class class_name(threading.Thread):
+  Deamon Threads:
+    These threads depend on the lifecycle of parent (main) thread. When the parent thread stops, the deamon thread also stops.
+    Syntax for deamon thread:
+      x = setDeamon()
+  Sync Threads:
+    Synchronizing means setting up threads in a queue. Means till one threads finishes, other thread won't start.
+    
+Python Modules:
+  datetime:
+    datetime.datetime.now(): return datetime object with complete date and time.
+    strftime(): formats the datetime object.
+      strftime formats:
+        %A: weekday
+        %d: date
+        %b: month in short form()
+        %B: month full
+        %m: month number
+        %y: year in 2 digit
+        %Y: year full
+        %H: hours(military: 24)
+        %I: civin hours
+        %M: min
+        %p: am/pm
+        %S: seconds
+
+Socket Programming:
+  Used to establish communication between two network machines.
+  For server side:
+    # Code
+    import socket   // Socket Programming Package
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   //To set protocol for the server
+    s.bind("127.0.0.1", 1250)    //setting up ip and port for server
+    s.listen(5)   //ready to accept connection
+    networkstream, address = s.accept()   //stores IP address and buffer of the client
+    while True:
+      msg = networkstream.recv(1024)   //recieve message
+      print(msg.decode())   //decode message as it is recieved in bytes
+      smsg = input('Enter Message: ')   //Enter message to be sent to the client
+      networkstream.send(smsg.encode('utf-8'))    //send encoded message to the client buffer
+    For client side:
+      # Code
+      import socket
+      networkstream = s.connect("127.0.0.1", 1250)    //connects to server and stores its stream address in the variable
+      while True:
+        msg = input('Enter message')
+        networkstream.send(msg.encode('utf-8'))
+        smsg = ns.recieve(1024)
+        print(smsg.decode())
+        if msg == quit:
+          s.close()
+          break

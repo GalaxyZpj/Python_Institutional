@@ -18,7 +18,7 @@ def connect(s):
     pc.ssl=True
     pubnub = PubNub(pc)
     # Listen for Messages on the Market Order Channel
-    channel = 'fan'
+    channel = 'lock'
 
     def show(msg,stat):
         if(msg and stat):print(msg.timetoken,stat.status_code)
