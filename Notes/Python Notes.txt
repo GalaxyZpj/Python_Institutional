@@ -23,7 +23,7 @@ input():
   a = float(input('Enter number: ')) //int() transforms str to float
 Taking Multiple Inputs in a single line:
   eg.
-    k = input('Enter 3 no: ').split(' ')    //k will have a tuple
+    k = input('Enter 3 no: ').split(' ')    //k will have a List
     a ,b, c = input('Enter 3 no: ').split(' ')  //can only accept 3 values or will show error
 
 type(x): returns the type of x.

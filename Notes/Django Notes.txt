@@ -9,7 +9,7 @@ Cycle: Browser -> url -> view -> webpage -> Browser
 
 Initial WorkFlow:
     Initials:
-        Terminal: $django-admin startproject project_name       //start the project and create its files
+        Terminal: django-admin startproject project_name       //start the project and create its files
         Terminal: cd project_directory
         Terminal: python3 manage.py runserever      //to start the server
     views.py
@@ -73,3 +73,10 @@ Session Buffer:
     It is a special memory area of buffer which is automatically created on client machine when user open a web browser.
     This buffer is further used ny server to track the client information.
     Information which is stored in session is shared in whole web application.
+Uploading a file to database:
+    -template should use POST method.
+    -{% csrf_token %} should be added after the starting form tag.
+    -<input type="file">        //to choose the file
+    
+    -Open file using file handling in wb mode.
+    -

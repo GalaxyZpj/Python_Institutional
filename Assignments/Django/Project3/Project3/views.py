@@ -69,7 +69,7 @@ def registration(request):
         dateLaterOneYear = dateToday + timedelta(days = 365)
         if accno == '' or first_name == '' or last_name == '' or dob == '' or gender == '' or mobile == '' or email == '' or password == '' or pin == '':
             return render(request, "customerRegister.html", {'output': 'Fill all required entries.'})
-        q = f"insert into CustomerData values({accno}, '{first_name}', '{last_name}', '{dob}', '{gender}', '{mobile}', '{email}', '{dateToday.strftime('%Y-%m-%d')}', '{dateLaterOneYear.strftime('%Y-%m-%d')}', '{status}', '{password}', '{pin}', '{adminVerified}', '{entryValidator}')"
+        q = f"insert into CustomerData values({accno}, '{first_name}', '{last_name}', '{dob}', '{gender}', '{mobile}', '{email}', '{dateToday.strftime('%Y-%m-%d')}', '{dateLaterOneYear.strftime('%Y-%m-%d')}', '{status}', '{password}', '{pin}', '{adminVerified}', '{entryValidator}', 'null')"
         cmd.execute(q)
         conn.commit()
         conn.close()
