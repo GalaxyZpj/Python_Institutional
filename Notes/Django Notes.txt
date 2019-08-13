@@ -43,6 +43,11 @@ url.py:
         from . import views
     This is used to call actions from views.py and map them. 
     Inside urlpatterns, url path to all the actions are linked.
+    Syntax:
+        path('url/', views.action_name, name='<name>')
+        Here, <name> can be used when we need to set a link, for eg, in a <a href> tag.
+        To create the link between <a> tag and any specified url in the urls.py file, we need to use the following template tag:
+            {% url '<the name specified for the url in urls.py>' %}
 
 templates:
     This folder is created manually.
@@ -80,3 +85,68 @@ Uploading a file to database:
     
     -Open file using file handling in wb mode.
     -
+
+Creating an app in django
+    Syntax:
+        python3 manage.py startapp <appname>
+    On creating an app, a folder with appname is added in BASE_DIR.
+    It contains same files as in the project_name folder with additional app.py, models.py, tests.py, etc.
+    Specify the actions for the app in views.py.
+    To link them to a url, create urls.py in the app folder and import the following:
+        from django.contrib import admin
+        from django.urls import path
+    Now we can specify the urls for the app in this file.
+    To link these urls to the main project, goto the urls.py of the main project folder and import the following:
+        from django.urls import include
+        This is used to import all the content of the specified file as shown below.
+    Then  in the urlpatterns list, Enter the following:
+        path('', include('<appname>.urls')),
+        This will include all the urls specified in the urls.py file of the app folder into the urls.py file of the main project folder.
+    To add the app to the main project, do the following:
+        Go to the settings.py, under the INSTALLED_APPS list, add the app using the following syntax:
+            <appname>.apps.<appname>Config,
+
+
+Adding all the resource files to a specific folder:
+    We wanna keep all our resource files such as images, js, css etc files all in one folder, for that do the following:
+        Go to settings.py of the main project, scroll to the bottom, add the following lines:
+            STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+            STATICFILES_DIRS = [
+                os.path.join(BASE_DIR, 'btre/static')
+            ]
+        The first line defines the root for all the resource files of our project.
+        The second file specifies the location at which django need to search for all the resource files. Here we can add multiple locations.
+        To bring all the files stored at multiple locations specified in the STATICFILES_DIRS to the STATIC_ROOT specified folder, run the following command:
+            python3 manage.py collectstatic
+            This line collects all the files from the folders specified in STATICFILES_DIRS and copy them to the STATIC_ROOT folder.
+
+Configuring out project to work with postgres:
+    We should have postgres installed.
+    Goto settings.py of the project and in the DATABASES dictionary, modify the following:
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'btredb',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+    Details would be as per the database setup, this was just a demo.
+
+Models:
+    Models contains the definations for the columns which are to be created in a table.
+    They are formed in the models.py file which is present inside any app folder.
+    Models are created by defining a class, which is a subclass of 'models.Model', with the name of the table.
+    The strings defined in the class will be the column names in the table.
+
+Migrations:
+    Migrations are the files which help to make changes in the database.
+    In layman terms, the commits for the changes in the database are stored in the migrations file.
+    Django by default has some migration files ready for the admin and other stuff.
+    To push those commits, we need to run the following:
+        python3 manage.py migrate
+    Now define your models in the models.py of the app.
+    To make migrations, run the following command:
+        python3 manage.py makemigrations
+        This command will create a migration file inside migrations folder. The file would contain all the changes that are to be done to the database.
+    To show the sql query from the migration file, run the following command:
+        python3 manage.py sqlmigrate <appname> <migrationFileSerialNo>
+        eg: python3 manage.py sqlmigrate listings 0001
+
