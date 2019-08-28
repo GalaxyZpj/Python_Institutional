@@ -150,3 +150,37 @@ Migrations:
         python3 manage.py sqlmigrate <appname> <migrationFileSerialNo>
         eg: python3 manage.py sqlmigrate listings 0001
 
+Fetching from the database:
+    To fetch the data from a table:
+        Goto the views.py file of the app.
+        First, import the Model from which the data is to be fetched, using the following statement:
+            from .models import <modelName>
+        Now use the following to store the content in a variable:
+            var = modelName.objects.all()
+            This fetches a Query object which can be put in a dictionary and then the dictionary can be passed as an argument in the render function so we can use the contents of the fetched model using the template tags and a for loop in the template file.
+
+Creating a Super User for DjangoAdmin Functionality:
+    For this, we need to run the following command in the terminal:
+        python3 manage.py createsuperuser
+Registering the app for the admin area:
+    Goto admin.py file inside the app folder.
+    First import the model which is defiened in the models.py file for the app by using the following command:
+        from .models import <modelName>
+    To register the app for the admin, enter the following line:
+        admin.site.register(<modelName>)
+    When this done, we can now add data into the app model via the django admin.
+Modifying the admin section for an app:
+    This can be used to modify the content which the admin can view in the django admin area.
+    To do so:
+        Go to the admin.py file of the app.
+        Create a class with the name "<appname>Admin" with is a subclass of the class "admin.ModelAdmin".
+        Also pass the class name in the function "admin.site.register" as an argument.
+        In the defination of the class, we are going to check out some of the variables from the parent class which are going to be overwritten.
+            list_display: This is a tuple which contains the name of the columns which are to be displayed in the admin area.
+                Eg:     list_display = ('id', 'title', 'price')
+            list_display_links: In this tuple, we specify the column name from which we need to enable the link to open the complete detail form of the entry.
+            list_filter: In this tuple, we specify the name of the column by which we need to filter the visible data.
+                         When this variable is declared, it adds a filter section which displays all the options for the specified filter column.
+            list_editable: In this tuple, we can select which column can be edited right itself in the table where all the data is displayed.
+            search_fields: In this tuple, we can add all the columnnames that are to be used in search fields.
+            list_per_page: Here we can specify an integer which refers to the no. of items that are displayed on a page.
